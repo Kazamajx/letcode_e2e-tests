@@ -9,3 +9,7 @@ Given("User visits the LetCode website", () => {
 Then("User sees {string} title in the tab", (title: string) => {
   shared.assertTitle(title);
 });
+
+Given("User visits the {string} url", (url: string) => {
+  shared.visitTestAutomationTrainingUrl(url);
+});

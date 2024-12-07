@@ -9,3 +9,18 @@ Feature: This is an example
         Examples:
             | title                        |
             | "Interact with Input fields" |
+
+
+    Scenario Outline: Verify that the user sees all textboxes on the Input page
+        Given User visits the <url> url
+        Then User sees the Full Name textbox
+        * User sees the Append textbox
+        * User sees the Inside textbox
+        * User sees the Clear textbox
+        * User sees the Confirm textbox
+        * User sees the Readonly textbox
+
+        Examples:
+            Examples:
+            | url     |
+            | "/edit" |
