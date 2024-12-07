@@ -21,6 +21,15 @@ Feature: This is an example
         * User sees the Readonly textbox
 
         Examples:
-            Examples:
             | url     |
             | "/edit" |
+
+    Scenario Outline: Verify that the user can type a string on the Full Name textbox
+        Given User visits the <url> url
+        When User types <fullName> on the Full Name textbox
+        Then User sees the <fullName> full name on the Full Name textbox
+
+        Examples:
+            | url     | fullName          |
+            | "/edit" | "Davide Zanda"    |
+            | "/edit" | "Salvatore Zanda" |

@@ -36,11 +36,19 @@ class InputPage {
   }
 
   inputConfirmTextboxVisible() {
-    this.elements.inputFullNameTextbox().should("be.visible");
+    this.elements.inputConfirmTextbox().should("be.visible");
   }
 
   inputReadonlyTextBoxVisible() {
-    this.elements.inputFullNameTextbox().should("be.visible");
+    this.elements.inputReadonlyTextbox().should("be.visible");
+  }
+
+  typeFullName(fullName: string) {
+    this.elements.inputFullNameTextbox().type(fullName);
+  }
+
+  showFullName(fullName: string) {
+    this.elements.inputFullNameTextbox().should("have.text", fullName);
   }
 }
 

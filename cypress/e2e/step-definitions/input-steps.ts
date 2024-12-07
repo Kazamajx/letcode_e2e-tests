@@ -1,4 +1,4 @@
-import { Then } from "@badeball/cypress-cucumber-preprocessor";
+import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import inputPage from "../page-objects/input-page";
 import { inputString } from "../strings/input-strings";
 
@@ -29,3 +29,14 @@ Then("User sees the Confirm textbox", () => {
 Then("User sees the Readonly textbox", () => {
   inputPage.inputReadonlyTextBoxVisible();
 });
+
+When("User types {string} on the Full Name textbox", (fullName: string) => {
+  inputPage.typeFullName(fullName);
+});
+
+Then(
+  "User sees the {string} full name on the Full Name textbox",
+  (fullname: string) => {
+    inputPage.showFullName(fullname);
+  }
+);
