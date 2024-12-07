@@ -1,4 +1,4 @@
-class ExamplePage {
+class Shared {
   /**
    * For the elements use:
    * elements = {
@@ -8,7 +8,7 @@ class ExamplePage {
    * }
    */
 
-  visitExamplePage() {
+  visitTestAutomationTrainingPage() {
     cy.visit("/test");
   }
 
@@ -17,6 +17,6 @@ class ExamplePage {
   }
 }
 
-const examplePage = new ExamplePage();
+const shared = new Shared();
 
-export default examplePage;
+export default shared;
