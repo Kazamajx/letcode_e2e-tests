@@ -64,6 +64,14 @@ class InputPage {
   showInside(initialString: string) {
     this.elements.inputInsideTextbox().should("have.value", initialString);
   }
+
+  deleteStringClearTextbox() {
+    this.elements.inputClearTextbox().clear();
+  }
+
+  showEmpty() {
+    this.elements.inputClearTextbox().should("have.value", "");
+  }
 }
 
 const inputPage = new InputPage();

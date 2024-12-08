@@ -51,3 +51,12 @@ Feature: This is an example
         Examples:
             | url     |
             | "/edit" |
+
+    Scenario Outline: Verify that the user can clear a text on the Clear texbox
+        Given User visits the <url> url
+        When User deletes the string on the Clear textbox
+        Then User sees an empty string on the Clear texbox
+
+        Examples:
+            | url     |
+            | "/edit" |

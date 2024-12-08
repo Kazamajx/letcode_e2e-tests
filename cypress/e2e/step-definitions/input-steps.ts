@@ -62,3 +62,11 @@ Then("User sees the correct string on the Inside textbox", () => {
   const initialString = initialInsideString;
   inputPage.showInside(initialString);
 });
+
+When("User deletes the string on the Clear textbox", () => {
+  inputPage.deleteStringClearTextbox();
+});
+
+Then("User sees an empty string on the Clear texbox", () => {
+  inputPage.showEmpty();
+});
