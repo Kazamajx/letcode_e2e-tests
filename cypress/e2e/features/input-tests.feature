@@ -68,3 +68,13 @@ Feature: This is an example
         Examples:
             | url     |
             | "/edit" |
+
+    Scenario Outline: Verify that the user cannot type on the Confirm textbox
+        Given User visits the <url> url
+        Then User sees the Confirm texbox readonly
+        * User sees the original text on the Confirm textbox
+
+        Examples:
+            | url     | confirmString |
+            | "/edit" | "blabla"      |
+            | "/edit" | "Davide"      |

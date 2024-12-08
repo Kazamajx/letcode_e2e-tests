@@ -76,6 +76,14 @@ class InputPage {
   showDisabled() {
     this.elements.inputConfirmTextbox().should("have.attr", "disabled");
   }
+
+  showReadonly() {
+    this.elements.inputReadonlyTextbox().should("have.attr", "readonly");
+  }
+
+  showTextReadonly(initialString: string) {
+    this.elements.inputReadonlyTextbox().should("have.value", initialString);
+  }
 }
 
 const inputPage = new InputPage();

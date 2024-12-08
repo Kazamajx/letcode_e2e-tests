@@ -5,6 +5,7 @@ import {
   inputTitleString,
   initialAppendedString,
   initialInsideString,
+  initialConfirmString,
 } from "../strings/input-strings";
 
 Then("User sees the Input title", () => {
@@ -73,4 +74,13 @@ Then("User sees an empty string on the Clear texbox", () => {
 
 Then("User sees the Confirm texbox disabled", () => {
   inputPage.showDisabled();
+});
+
+Then("User sees the Confirm texbox readonly", () => {
+  inputPage.showReadonly();
+});
+
+Then("User sees the original text on the Confirm textbox", () => {
+  const initialString = initialConfirmString;
+  inputPage.showTextReadonly(initialString);
 });
