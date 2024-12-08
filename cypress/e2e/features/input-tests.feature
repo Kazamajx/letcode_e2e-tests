@@ -33,3 +33,13 @@ Feature: This is an example
             | url     | fullName          |
             | "/edit" | "Davide Zanda"    |
             | "/edit" | "Salvatore Zanda" |
+
+    Scenario Outline: Verify that the user can append a text on the Append textbox
+        Given User visits the <url> url
+        When User types <stringAppended> on the Append textbox
+        Then User sees the original string with the <stringAppended> string appended on the Append textbox
+
+        Examples:
+            | url     | stringAppended    |
+            | "/edit" | " guy."           |
+            | "/edit" | " on all sports." |

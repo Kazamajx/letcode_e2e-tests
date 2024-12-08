@@ -1,6 +1,10 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import inputPage from "../page-objects/input-page";
-import { inputTitleString } from "../strings/input-strings";
+
+import {
+  inputTitleString,
+  initialAppendedString,
+} from "../strings/input-strings";
 
 Then("User sees the Input title", () => {
   inputPage.inputTitleVisible(inputTitleString);
@@ -38,5 +42,17 @@ Then(
   "User sees the {string} full name on the Full Name textbox",
   (fullName: string) => {
     inputPage.showFullName(fullName);
+  }
+);
+
+When("User types {string} on the Append textbox", (stringAppended: string) => {
+  inputPage.typeStringAppended(stringAppended);
+});
+
+Then(
+  "User sees the original string with the {string} string appended on the Append textbox",
+  (stringAppended: string) => {
+    const initialString = initialAppendedString;
+    inputPage.showStringAppended(initialString, stringAppended);
   }
 );

@@ -50,6 +50,16 @@ class InputPage {
   showFullName(fullName: string) {
     this.elements.inputFullNameTextbox().should("have.value", fullName);
   }
+
+  typeStringAppended(stringAppended: string) {
+    this.elements.inputAppendTextbox().type(stringAppended);
+  }
+
+  showStringAppended(initialString: string, stringAppended: string) {
+    this.elements
+      .inputAppendTextbox()
+      .should("have.value", initialString + stringAppended);
+  }
 }
 
 const inputPage = new InputPage();
