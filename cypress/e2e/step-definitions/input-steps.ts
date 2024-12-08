@@ -4,6 +4,7 @@ import inputPage from "../page-objects/input-page";
 import {
   inputTitleString,
   initialAppendedString,
+  initialInsideString,
 } from "../strings/input-strings";
 
 Then("User sees the Input title", () => {
@@ -56,3 +57,8 @@ Then(
     inputPage.showStringAppended(initialString, stringAppended);
   }
 );
+
+Then("User sees the correct string on the Inside textbox", () => {
+  const initialString = initialInsideString;
+  inputPage.showInside(initialString);
+});

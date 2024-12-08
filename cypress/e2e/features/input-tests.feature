@@ -43,3 +43,11 @@ Feature: This is an example
             | url     | stringAppended    |
             | "/edit" | " guy."           |
             | "/edit" | " on all sports." |
+
+    Scenario Outline: Verify that the user sees the correct text on the Inside textbox
+        Given User visits the <url> url
+        Then User sees the correct string on the Inside textbox
+        
+        Examples:
+            | url     |
+            | "/edit" |

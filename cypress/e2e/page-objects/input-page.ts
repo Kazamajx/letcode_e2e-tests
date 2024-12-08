@@ -60,6 +60,10 @@ class InputPage {
       .inputAppendTextbox()
       .should("have.value", initialString + stringAppended);
   }
+
+  showInside(initialString: string) {
+    this.elements.inputInsideTextbox().should("have.value", initialString);
+  }
 }
 
 const inputPage = new InputPage();
