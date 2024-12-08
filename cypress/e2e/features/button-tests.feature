@@ -1,6 +1,6 @@
-Feature: Input page tests
+Feature: Button page tests
 
-    Scenario Outline: Verify that the user sees the Input page
+    Scenario Outline: Verify that the user sees the Button page
         Given User visits the LetCode website
         When User clicks on the Click button
         Then User sees <title> title in the tab
