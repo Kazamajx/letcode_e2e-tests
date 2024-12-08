@@ -20,6 +20,8 @@ module.exports = defineConfig({
     specPattern: "**/*.feature",
     baseUrl: "https://letcode.in",
   },
+  viewportWidth: 3840,
+  viewportHeight: 2160,
   reporter: "junit",
   reporterOptions: {
     useFullSuiteTitle: true,

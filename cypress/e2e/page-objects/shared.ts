@@ -1,4 +1,4 @@
-class ExamplePage {
+class Shared {
   /**
    * For the elements use:
    * elements = {
@@ -8,15 +8,19 @@ class ExamplePage {
    * }
    */
 
-  visitExamplePage() {
+  visitTestAutomationTrainingPage() {
     cy.visit("/test");
   }
 
   assertTitle(title: string) {
     cy.title().should("eq", title);
   }
+
+  visitTestAutomationTrainingUrl(url: string) {
+    cy.visit(url);
+  }
 }
 
-const examplePage = new ExamplePage();
+const shared = new Shared();
 
-export default examplePage;
+export default shared;
