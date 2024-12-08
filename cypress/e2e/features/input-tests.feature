@@ -1,4 +1,4 @@
-Feature: This is an example
+Feature: Input page tests
 
     Scenario Outline: Verify that the user sees the Input page
         Given User visits the LetCode website
