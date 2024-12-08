@@ -72,6 +72,10 @@ class InputPage {
   showEmpty() {
     this.elements.inputClearTextbox().should("have.value", "");
   }
+
+  showDisabled() {
+    this.elements.inputConfirmTextbox().should("have.attr", "disabled");
+  }
 }
 
 const inputPage = new InputPage();

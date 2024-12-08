@@ -70,3 +70,7 @@ When("User deletes the string on the Clear textbox", () => {
 Then("User sees an empty string on the Clear texbox", () => {
   inputPage.showEmpty();
 });
+
+Then("User sees the Confirm texbox disabled", () => {
+  inputPage.showDisabled();
+});
