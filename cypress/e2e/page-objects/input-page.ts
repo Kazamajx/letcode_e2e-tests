@@ -48,7 +48,7 @@ class InputPage {
   }
 
   showFullName(fullName: string) {
-    this.elements.inputFullNameTextbox().should("have.text", fullName);
+    this.elements.inputFullNameTextbox().should("have.value", fullName);
   }
 }
 

@@ -1,9 +1,9 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import inputPage from "../page-objects/input-page";
-import { inputString } from "../strings/input-strings";
+import { inputTitleString } from "../strings/input-strings";
 
 Then("User sees the Input title", () => {
-  inputPage.inputTitleVisible(inputString);
+  inputPage.inputTitleVisible(inputTitleString);
 });
 
 Then("User sees the Full Name textbox", () => {
@@ -36,7 +36,7 @@ When("User types {string} on the Full Name textbox", (fullName: string) => {
 
 Then(
   "User sees the {string} full name on the Full Name textbox",
-  (fullname: string) => {
-    inputPage.showFullName(fullname);
+  (fullName: string) => {
+    inputPage.showFullName(fullName);
   }
 );

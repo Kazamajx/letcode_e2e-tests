@@ -1,1 +1,1 @@
-export const inputString = " Input";
+export const inputTitleString = " Input";
