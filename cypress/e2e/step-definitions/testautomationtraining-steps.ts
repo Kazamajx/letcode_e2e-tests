@@ -5,3 +5,7 @@ import testAutomationTrainingPage from "../page-objects/testautomationtraining-p
 When("User clicks on the Edit button", () => {
   testAutomationTrainingPage.clickEditButton();
 });
+
+When("User clicks on the Click button", () => {
+  testAutomationTrainingPage.clickClickButton();
+});
