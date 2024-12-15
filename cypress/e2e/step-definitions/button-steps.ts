@@ -1,4 +1,4 @@
-import { Then } from "@badeball/cypress-cucumber-preprocessor";
+import { Then, When } from "@badeball/cypress-cucumber-preprocessor";
 import buttonPage from "../page-objects/button-page";
 
 import {
@@ -37,4 +37,8 @@ Then("User sees the Disabled button", () => {
 
 Then("User sees the Hold button", () => {
   buttonPage.buttonHoldVisible(buttonHoldString);
+});
+
+When("User clicks on the Home button", () => {
+  buttonPage.clickHomeButton();
 });

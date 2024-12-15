@@ -61,6 +61,10 @@ class ButtonPage {
       .should("be.visible")
       .and("have.text", holdText);
   }
+
+  clickHomeButton() {
+    this.elements.buttonHomeButton().click();
+  }
 }
 
 const buttonPage = new ButtonPage();

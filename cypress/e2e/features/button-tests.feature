@@ -22,3 +22,12 @@ Feature: Button page tests
         Examples:
             | url        |
             | "/buttons" |
+
+    Scenario Outline: Verify that the user sees the Home page when the Home button is clicked
+        Given User visits the <url> url
+        When User clicks on the Home button
+        Then User sees <title> title in the tab
+
+        Examples:
+            | url        | title                  |
+            | "/buttons" | "LetCode with Koushik" |
