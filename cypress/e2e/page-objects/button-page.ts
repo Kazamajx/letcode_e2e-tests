@@ -69,7 +69,8 @@ class ButtonPage {
   buttonColorCorrectColor() {
     this.elements
       .buttonColorButton()
-      .should("have.css", "background-color", "rgb(138, 77, 118)");
+      .should("have.css", "color", "rgb(255, 255, 255)")
+      .and("have.css", "background-color", "rgb(138, 77, 118)");
   }
 }
 
