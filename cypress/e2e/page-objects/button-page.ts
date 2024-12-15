@@ -66,6 +66,15 @@ class ButtonPage {
     this.elements.buttonHomeButton().click();
   }
 
+  buttonLocationCorrectCoordinates() {
+    this.elements
+      .buttonLocationButton()
+      .should("have.css", "padding-bottom", "7px")
+      .and("have.css", "padding-left", "16px")
+      .and("have.css", "padding-right", "16px")
+      .and("have.css", "padding-top", "7px");
+  }
+
   buttonColorCorrectColor() {
     this.elements
       .buttonColorButton()

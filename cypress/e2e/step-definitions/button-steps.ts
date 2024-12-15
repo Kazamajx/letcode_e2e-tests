@@ -43,6 +43,10 @@ When("User clicks on the Home button", () => {
   buttonPage.clickHomeButton();
 });
 
+Then("User see the correct coordinates for the Location button", () => {
+  buttonPage.buttonLocationCorrectCoordinates();
+});
+
 Then("User see the correct color on the Color button", () => {
   buttonPage.buttonColorCorrectColor();
 });

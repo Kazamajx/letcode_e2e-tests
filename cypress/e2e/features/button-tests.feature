@@ -32,6 +32,14 @@ Feature: Button page tests
             | url        | title                  |
             | "/buttons" | "LetCode with Koushik" |
 
+    Scenario Outline: Verify that the user sees the correct coordinates for the Location button
+        Given User visits the <url> url
+        Then User see the correct coordinates for the Location button
+
+        Examples:
+            | url        |
+            | "/buttons" |
+
     Scenario Outline: Verify that the user sees the correct color on the Color button
         Given User visits the <url> url
         Then User see the correct color on the Color button
@@ -39,3 +47,5 @@ Feature: Button page tests
         Examples:
             | url        |
             | "/buttons" |
+
+
