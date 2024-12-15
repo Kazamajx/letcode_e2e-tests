@@ -65,6 +65,12 @@ class ButtonPage {
   clickHomeButton() {
     this.elements.buttonHomeButton().click();
   }
+
+  buttonColorCorrectColor() {
+    this.elements
+      .buttonColorButton()
+      .should("have.css", "background-color", "rgb(138, 77, 118)");
+  }
 }
 
 const buttonPage = new ButtonPage();

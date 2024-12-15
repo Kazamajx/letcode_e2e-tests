@@ -31,3 +31,11 @@ Feature: Button page tests
         Examples:
             | url        | title                  |
             | "/buttons" | "LetCode with Koushik" |
+
+    Scenario Outline: Verify that the user sees the correct color on the Color button
+        Given User visits the <url> url
+        Then User see the correct color on the Color button
+
+        Examples:
+            | url        |
+            | "/buttons" |
