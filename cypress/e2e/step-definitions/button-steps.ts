@@ -50,3 +50,7 @@ Then("User see the correct coordinates for the Location button", () => {
 Then("User see the correct color on the Color button", () => {
   buttonPage.buttonColorCorrectColor();
 });
+
+Then("User see the Disable button disabled", () => {
+  buttonPage.showDisabled();
+});

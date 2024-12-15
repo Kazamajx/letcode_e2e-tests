@@ -81,6 +81,10 @@ class ButtonPage {
       .should("have.css", "color", "rgb(255, 255, 255)")
       .and("have.css", "background-color", "rgb(138, 77, 118)");
   }
+
+  showDisabled() {
+    this.elements.buttonDisabledButton().should("have.attr", "disabled");
+  }
 }
 
 const buttonPage = new ButtonPage();

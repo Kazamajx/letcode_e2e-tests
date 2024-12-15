@@ -48,4 +48,12 @@ Feature: Button page tests
             | url        |
             | "/buttons" |
 
+    Scenario Outline: Verify that the user sees the Disabled button disabled
+        Given User visits the <url> url
+        Then User see the Disable button disabled
+
+        Examples:
+            | url        |
+            | "/buttons" |
+
 
