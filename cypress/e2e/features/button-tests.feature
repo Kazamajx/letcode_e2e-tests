@@ -9,3 +9,16 @@ Feature: Button page tests
         Examples:
             | title                         |
             | "Interact with Button fields" |
+
+    Scenario Outline: Verify that the user sees all buttons on the Buttons page
+        Given User visits the <url> url
+        Then User sees the Home button
+        * User sees the Location button
+        * User sees the Color button
+        * User sees the Tall and fat button
+        * User sees the Disabled button
+        * User sees the Hold button
+
+        Examples:
+            | url        |
+            | "/buttons" |

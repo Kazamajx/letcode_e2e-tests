@@ -1,7 +1,40 @@
 import { Then } from "@badeball/cypress-cucumber-preprocessor";
 import buttonPage from "../page-objects/button-page";
-import { buttonTitleString } from "../strings/button-strings";
+
+import {
+  buttonTitleString,
+  buttonHomeString,
+  buttonLocationString,
+  buttonColorString,
+  buttonTallAndFatString,
+  buttonDisabledString,
+  buttonHoldString,
+} from "../strings/button-strings";
 
 Then("User sees the Click title", () => {
   buttonPage.buttonTitleVisible(buttonTitleString);
+});
+
+Then("User sees the Home button", () => {
+  buttonPage.buttonHomeVisible(buttonHomeString);
+});
+
+Then("User sees the Location button", () => {
+  buttonPage.buttonLocationVisible(buttonLocationString);
+});
+
+Then("User sees the Color button", () => {
+  buttonPage.buttonColorVisible(buttonColorString);
+});
+
+Then("User sees the Tall and fat button", () => {
+  buttonPage.buttonTallAndFatVisible(buttonTallAndFatString);
+});
+
+Then("User sees the Disabled button", () => {
+  buttonPage.buttonDisabledVisible(buttonDisabledString);
+});
+
+Then("User sees the Hold button", () => {
+  buttonPage.buttonHoldVisible(buttonHoldString);
 });
